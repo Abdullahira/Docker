@@ -1,0 +1,17 @@
+#Update the repositories configured on your system
+sudo apt update
+#Download the Installation Script:
+curl -fsSL https://get.docker.com -o get-docker.sh
+#Run the Script: Execute the script to install Docker
+sudo sh get-docker.sh
+#Verify Installation:
+docker --version (Check Docker Version)
+sudo systemctl status docker (Check the status of yoir Docker)
+sudo docker run hello-world (Run a test container)
+
+
+#If you get below message then its successfully install in your machine 
+(Hello from Docker!
+This message shows that your installation appears to be working correctly.
+)
+
