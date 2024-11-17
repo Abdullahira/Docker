@@ -6,7 +6,7 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 #Verify Installation:
 docker --version (Check Docker Version)
-sudo systemctl status docker (Check the status of yoir Docker)
+sudo systemctl status docker (Check the status of your Docker)
 sudo docker run hello-world (Run a test container)
 
 
