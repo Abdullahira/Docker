@@ -1,0 +1,55 @@
+#What is Docker image ?
+A Docker image is a complete package that contains everything needed to run an application, including the code, libraries, dependencies, and configuration files. When a Docker image is executed, it creates a container, which is an isolated environment for running the application.
+
+#Install Nginx 
+i) docker run nginx
+
+ii) docker run -p 80:80 nginx (80:80 Its called port mapping-First port is host portand Second port is container port)
+Note : If we closed the terminal the nginx server will down. Need to run it detached mode)
+
+iii) docker run -d -p 8090:80 nginx (-d for running the nginx server in detached mode,It will run the server on backround)
+Note : 8090 is host port ,which we use after ip address e.g. 0.0.0.0:8090
+
+iv) docker ps (Showing running container)
+
+v) docker run -d --name mynginx-2 -p 8091:80 nginx (--name for naming container e.g. --name abcd)
+
+vi) docker ps -a (Showing all container)
+
+vii) docker stop container ID/Name (For stop container e.g. docker stop 1234/abcd)
+
+viii) docker rm container ID/Name (For remove container e.g. docker rm 1234/abcd)
+
+ix) docker system prune (Remove all stopped containers and etc)
+
+x) docker exec -it "container name" bash (Doing inside the container)
+
+xi) cat/etc/os-release (Details version)
+
+xii) docker cp "source address" "Destination address" (Copying file from container to host machine , vice-versa)
+
+xiii) Running a html file inside a container 
+a) Go to container using (docker exec -it "Container name" bash)
+b) Go to nginx /etc/nginx
+c) cd conf.d
+d) vim default.conf
+e) Put the html file in right path which is configured on default.conf
+f) Hit the browser with port 
+
+xiv) docker commit "container name" "Assign name" (Container -> Image for sharing purpose)
+
+xv) docker images (show all images)
+
+xvi) docker save ym-nginx | gzip > ym-nginx.tar.gz (Save Image)
+
+xvii) docker rm -f container ID/Name (Force remove container)
+
+xviii) docker rmi (Remove image)
+
+xix) docker load -i "image name" (Loading image)
+
+xx) docker run -d --name mynginx-2 --restart=always -p 8091:80 nginx (Restart container when the server up)
+
+xxi) docker logs container name/ID (For log details)
+
+xxii) docker logs -f container name/ID (live log details)
