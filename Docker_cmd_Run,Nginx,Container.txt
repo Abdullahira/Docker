@@ -4,7 +4,7 @@ A Docker image is a complete package that contains everything needed to run an a
 #Install Nginx 
 i) docker run nginx
 
-ii) docker run -p 80:80 nginx (80:80 Its called port mapping-First port is host portand Second port is container port)
+ii) docker run -p 80:80 nginx (80:80 Its called port-mapping First port is host port and Second port is container port)
 Note : If we closed the terminal the nginx server will down. Need to run it detached mode)
 
 iii) docker run -d -p 8090:80 nginx (-d for running the nginx server in detached mode,It will run the server on backround)
